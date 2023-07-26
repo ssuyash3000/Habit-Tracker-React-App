@@ -1,0 +1,32 @@
+.navbar {
+  background-color: aquamarine;
+  height: 75px;
+  width: 100%;
+  margin-top: -15px;
+  padding-top: 5px;
+  /* border: 5px solid red; */
+}
+
+.nav-item {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: -5px;
+  font-size: large;
+  color: black;
+  /* justify-content: space-around; */
+}
+.nav-item li a {
+  text-decoration: none;
+  color: black;
+}
+.nav-item li a:hover {
+  text-decoration: underline;
+}
+h1 {
+  margin: 0px;
+  margin-top: 10px;
+  margin-left: 5%;
+}
