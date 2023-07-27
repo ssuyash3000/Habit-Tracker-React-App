@@ -1,0 +1,41 @@
+.createhabit {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+  margin-left: 30%;
+  align-items: flex-start;
+}
+.createhabit h1 {
+  margin: 0px;
+}
+.input-lable {
+  margin: 15px;
+  margin-left: 0px;
+  font-size: xx-large;
+}
+.form-field {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+
+  align-items: flex-start;
+}
+
+.input-bar {
+  width: 70%;
+  height: 40px;
+  margin-bottom: 15px;
+  border-color: white;
+  border-bottom: 5px dashed rgb(66, 66, 161);
+}
+
+.submit-btn {
+  background-color: aliceblue;
+  height: 50px;
+  margin-left: 30%;
+  width: 40%;
+}
+.submit-btn:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}

@@ -7,7 +7,7 @@ function Navbar(props) {
 
       <ul className="nav-item">
         <li>
-          <Link to="/create-habit">Create Habit</Link>
+          <Link to="/create-habit">Add Habit</Link>
         </li>
         <li>
           <Link to="/">Home</Link>
