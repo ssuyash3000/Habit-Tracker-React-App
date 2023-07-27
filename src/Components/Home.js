@@ -1,7 +1,7 @@
 import Habit from "./Habit";
 import "../Styles/Home.css";
 function Home(props) {
-  let { habitList } = props;
+  let { habitList, setHabitList } = props;
   const date = new Date();
   const months = [
     "January",
@@ -34,8 +34,16 @@ function Home(props) {
         {date.getFullYear()} <br /> {days[date.getDay()]}
       </h2>
       <div className="habit-ctn">
-        {habitList.map((habit) => {
-          return <Habit title={habit.title} doneStatus={habit.status} />;
+        {habitList.map((habit, index) => {
+          return (
+            <Habit
+              habitList={habitList}
+              setHabitList={setHabitList}
+              currHabit={habit}
+              index={index}
+              key={index}
+            />
+          );
         })}
       </div>
     </div>
