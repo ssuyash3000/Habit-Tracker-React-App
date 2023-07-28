@@ -1,0 +1,20 @@
+.track-ctn {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* border: 5px solid red; */
+  justify-content: center;
+}
+
+.track-habit {
+  display: flex;
+  flex-direction: column;
+  margin-right: 55px;
+}
+.track-habit h1 {
+  margin: 0;
+  display: block;
+}
+.track-list {
+  text-align: left;
+}

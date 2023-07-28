@@ -1,14 +1,17 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../Styles/createhabit.css";
+import firebase from "firebase/compat/app";
+import "firebase/compat/firestore";
 function Createhabit(props) {
-  let { habitList, setHabitList } = props;
+  const navigate = useNavigate();
   let [habitInput, setHabitInput] = useState("");
   let [giveMessage, setGiveMessage] = useState(false);
-  const navigate = useNavigate();
+  let { habitList } = props;
+
+  let date = new Date();
   const handleSubmit = (e) => {
     e.preventDefault();
-
     if (habitInput === "") {
       setGiveMessage(true);
       setTimeout(() => {
@@ -16,14 +19,21 @@ function Createhabit(props) {
       }, 2000);
       return;
     }
+    const habits = firebase.firestore().collection("Habits");
+    const arrayRef = habits.doc("v27GQa68JwIYH8gQrjV3");
     setGiveMessage(false);
+    let infoObj = {};
+    infoObj[date.getDay().toString()] = "No Action Taken";
     let newHabit = {
       title: habitInput,
-      status: "No action Taken",
+      Days: { ...infoObj },
     };
     habitList.push(newHabit);
-    setHabitList(habitList);
-    // setHabitInput("");
+
+    let HabitList = [...habitList];
+    arrayRef.update({ HabitList }).then(() => {
+      console.log("Inc Updation Success");
+    });
     navigate("/");
   };
   return (
