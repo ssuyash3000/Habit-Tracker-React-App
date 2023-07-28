@@ -26,7 +26,7 @@ function TrackHabit(props) {
           <div className="track-habit" key={index}>
             <h1> Habit - {habit.title} </h1>
             {dayArray.map((day) => {
-              let action = "No action Taken";
+              let action = "No Action Taken";
               if (habit.Days[day] !== undefined) action = habit.Days[day];
               return (
                 <div className="track-list" key={day}>
