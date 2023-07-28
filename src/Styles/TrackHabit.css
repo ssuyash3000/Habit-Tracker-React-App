@@ -18,3 +18,15 @@
 .track-list {
   text-align: left;
 }
+/* .action-ctn {
+  display: none;
+} */
+.track-list .action-ctn {
+  display: none;
+}
+.track-list:hover .action-ctn {
+  display: block;
+}
+#day-ctn:hover {
+  cursor: pointer;
+}
