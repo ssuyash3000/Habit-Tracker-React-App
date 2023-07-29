@@ -6,7 +6,7 @@ function TrackHabit(props) {
   let { habitList } = props;
   // let newStatus = "";
   let dayArray = [];
-  for (let i = 0; i < 7; i++) dayArray.push(i + 1);
+  for (let i = 0; i < 7; i++) dayArray.push(i);
   const handleStatusChange = (newAction, index, day) => {
     habitList[index].Days[day] = newAction;
     const habits = firebase.firestore().collection("Habits");

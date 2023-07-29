@@ -21,7 +21,7 @@ function App() {
           let HabitList = snapshot.docs[0].data().HabitList;
 
           HabitList.forEach((element) => {
-            for (let i = 1; i <= 7; i++) element.Days[i] = "No Action Taken";
+            for (let i = 0; i <= 6; i++) element.Days[i] = "No Action Taken";
           });
 
           // console.log(HabitList);
